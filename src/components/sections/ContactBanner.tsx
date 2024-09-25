@@ -23,19 +23,18 @@ function Banner() {
   return (
     <div className="bg-inverted flex flex-col justify-center rounded-xl w-full md:min-h-96 p-6">
       <div className="z-10 flex flex-col items-center justify-center">
-        <Headline className="text-light-primary max-w-[35ch] font-semibold">
+        <Headline  className="text-light-primary max-w-[35ch] font-semibold text-xl">
           PRÊT À COMMANCER VOTRE PRÉSENCE WEB PROFESSIONNELLE ?
         </Headline>
         <p className="mt-6 text-center max-w-[75ch] text-lg text-light-secondary">
-          Obtenez votre devis gratuit dès maintenant et découvrez comment notre
-          expertise en création de sites web peut transformer votre projet en un
-          succès digital assuré.
+          Obtenez votre devis gratuit dès maintenant et découvrez comment nos
+          solutions peut transformer votre entreprise.
         </p>
         <CallToAction
           className="mt-6 bg-light-highlight text-dark-primary"
           href="/#contact"
         >
-          OBTENIR MON DEVIS GRATUIT
+         Contacter Nous
         </CallToAction>
       </div>
     </div>
