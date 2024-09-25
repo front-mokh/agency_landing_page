@@ -31,10 +31,10 @@ function Banner() {
           solutions peut transformer votre entreprise.
         </p>
         <CallToAction
-          className="mt-6 bg-light-highlight text-dark-primary"
+          className="mt-6 bg-light-highlight text-dark-primary w-full md:w-60"
           href="/#contact"
         >
-         Contacter Nous
+         Contactez-Nous
         </CallToAction>
       </div>
     </div>

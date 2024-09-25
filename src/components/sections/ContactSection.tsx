@@ -13,14 +13,12 @@ export default function ContactSection() {
   return (
     <Section id="contact" background="dark">
       <ContactGradient />
-      <Container className="grid grid-cols-2 gap-12">
+      <Container className="grid md:grid-cols-2 gap-12">
         <div>
-          <Headline animated alignment="left">
-            Contactez-nous maintenant
-          </Headline>
+          <Headline animated>Contactez-nous maintenant</Headline>
           <CATList />
         </div>
-        <ContactForm/>
+        <ContactForm />
       </Container>
     </Section>
   );

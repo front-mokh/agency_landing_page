@@ -97,11 +97,11 @@ function HeroSection() {
           ref={ctaRef}
           className="w-full flex flex-col justify-center md:flex-row gap-4 mt-8"
         >
-          <CallToAction className="w-full" size="medium" variant="primary" href="/contact">
-          Contacter Nous
+          <CallToAction className="w-full md:w-60" size="medium" variant="primary" href="/contact">
+          Contactez-Nous
           </CallToAction>
-          <CallToAction className="w-full" size="medium" variant="secondary" href="/contact">
-            Nos Produits
+          <CallToAction className="w-full md:w-60" size="medium" variant="secondary" href="/contact">
+            Voir Nos Produits
           </CallToAction>
         </div>
       </Container>

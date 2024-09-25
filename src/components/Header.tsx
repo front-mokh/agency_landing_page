@@ -90,7 +90,7 @@ export default function Header() {
         isOpen && "h-screen bg-dark"
       )}
     >
-      <Container className="flex flex-row justify-between items-start">
+      <Container className="flex flex-row justify-between items-start md:items-center">
         <Link
           href="/"
           onClick={closeMenu}
