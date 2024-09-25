@@ -36,7 +36,7 @@ export const useScrollBehavior = () => {
 };
 
 // Custom hook for GSAP animations
-export const useHeaderAnimation = (isAtTop: boolean, isVisible: boolean) => {
+export const useHeaderAnimation = (isOpen:boolean, isAtTop: boolean, isVisible: boolean) => {
   const headerRef = useRef(null);
 
   const pathname = usePathname();
@@ -47,7 +47,7 @@ export const useHeaderAnimation = (isAtTop: boolean, isVisible: boolean) => {
     gsap.to(header, {
       duration: 0.3,
       backgroundColor:
-        isAtTop && pathname === "/"
+        isAtTop &&  isOpen && pathname === "/"
           ? "rgba(0, 0, 0, 0)"
           : "#25344F",
       backdropFilter: isAtTop ? "blur(0px)" : "blur(4px)",
@@ -67,7 +67,7 @@ export const useHeaderAnimation = (isAtTop: boolean, isVisible: boolean) => {
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isAtTop, isVisible } = useScrollBehavior();
-  const headerRef = useHeaderAnimation(isAtTop, isVisible);
+  const headerRef = useHeaderAnimation(isOpen,isAtTop, isVisible);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
