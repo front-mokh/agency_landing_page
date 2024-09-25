@@ -59,7 +59,7 @@ function ProductCard({
         <p className="text-lg font-medium">{subtitle}</p>
         <p className="pt-1 text-dark-secondary">{description}</p>
       </div>
-      <div className="flex gap-2">
+      <div className="flex flex-col  md:flex-row gap-2">
         <CallToAction  className="w-full text-center" href="/">voir les détails</CallToAction>
         <CallToAction variant={"secondary"} className="border-[#25344f] text-dark-primary w-full text-center" href={"/"} size={"small"}>
           voir la démo en direct{" "}
