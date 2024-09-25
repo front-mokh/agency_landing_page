@@ -17,7 +17,7 @@ export default function ProductsSection() {
           Découvrez NOS SOLUTIONS LOGICIELLES
         </Headline>
         <div
-          ref={containerRef}
+          ref={containerRef as React.Ref<HTMLDivElement>}
           className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-36"
         >
           {products.map((product, index) => (

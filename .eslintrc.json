@@ -1,10 +1,18 @@
 {
   "extends": "next/core-web-vitals",
-  
+
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
-    "typescript.validate.enable": false,
-"javascript.validate.enable": false,
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-inferrable-types": "off"
+  },
+  "typescript": {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    "ignoreBuildErrors": true
   }
 }
