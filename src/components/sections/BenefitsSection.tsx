@@ -21,10 +21,10 @@ export default function BenefitsSection() {
 
 function BenefitsCard() {
   return (
-    <div className="relative p-8 lg:p-12 bg-light rounded-xl shadow-[rgba(0,_0,_0,_0.1)_0px_60px_40px_-7px]">
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-12">
+    <div className="relative p-6 lg:p-12 bg-light rounded-xl shadow-[rgba(0,_0,_0,_0.1)_0px_60px_40px_-7px]">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div className="col-span-1 lg:col-span-2 w-full">
-          <Tagline animated alignment="left">
+          <Tagline animated alignment="left" >
             VOTRE RÉUSSITE NUMÉRIQUE
           </Tagline>
           <Headline
