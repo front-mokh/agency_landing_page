@@ -116,7 +116,7 @@ export default function FAQTable() {
   return (
     <div className="mt-16 max-w-5xl mx-auto">
       <ul
-        ref={containerRef}
+        ref={containerRef as React.Ref<HTMLUListElement>}
         className="list-none p-0 space-y-2"
         itemScope
         itemType="https://schema.org/FAQPage"
