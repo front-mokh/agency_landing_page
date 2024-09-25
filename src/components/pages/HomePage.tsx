@@ -7,14 +7,16 @@ import BenefitsSection from "../sections/BenefitsSection";
 import HeroSection from "../sections/HeroSection";
 import ContactSection from "../sections/ContactSection";
 import FeaturesSection from "../sections/FeaturesSection";
+import ProductsSection from "../sections/productsSection";
 
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <HeroSection />
       <BenefitsSection />
-      <ServicesSection />
-      <AboutSection />
+      <ProductsSection/>
+      {/* <ServicesSection /> */}
+      {/* <AboutSection /> */}
       <ContactBanner />
       <FAQSection />
       <ContactSection />

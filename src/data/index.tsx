@@ -48,15 +48,13 @@ export const benefits = [
   {
     iconPath: "/icons/trust.svg",
     title: "Plus de clients",
-    description:
-      "Attirez et convertissez plus de prospects",
+    description: "Attirez et convertissez plus de prospects",
   },
 
   {
     iconPath: "/icons/competition.svg",
     title: "Plus de visibilité",
-    description:
-      "Améliorez votre classement dans les moteurs de recherche",
+    description: "Améliorez votre classement dans les moteurs de recherche",
   },
   {
     iconPath: "/icons/growth.svg",
@@ -96,6 +94,23 @@ export const features = [
     title: "Design Adaptatif Intelligent",
     description:
       "Une expérience fluide sur tous les appareils. Votre site s'ajuste parfaitement aux smartphones, tablettes et ordinateurs, assurant une présentation impeccable et une navigation intuitive pour chaque visiteur.",
+  },
+];
+
+export const products = [
+  {
+    imagePath: "/icons/satisfaction.svg",
+    title: "Commerce Plus",
+    subtitle: "Plateforme e-commerce tout-en-un",
+    description:
+      "Optimisez vos ventes en ligne avec notre solution complète de gestion de boutique en ligne.",
+  },
+  {
+    imagePath: "/icons/seo.svg",
+    title: "DentaGest",
+    subtitle: "Gestion de cabinet dentaire simplifiée",
+    description:
+      "Rationalisez vos opérations cliniques et améliorez l'expérience patient avec notre logiciel spécialisé.",
   },
 ];
 export const services = [
@@ -170,7 +185,7 @@ export const services = [
   // },
   {
     iconPath: "/icons/refresh.svg",
-    title: ["Actualisation des", <br key={0}/>, " Sites Web"],
+    title: ["Actualisation des", <br key={0} />, " Sites Web"],
     description: [
       "Nous assurons la mise à jour et l'évolution de votre site pour qu'il reste performant et adapté à vos besoins",
     ],

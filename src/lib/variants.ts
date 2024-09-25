@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const ctaVariants = cva(
-  "font-heading block w-fit font-semibold  text-white uppercase rounded-sm",
+  "font-heading flex gap-2 items-center w-fit font-semibold  text-white uppercase rounded-sm",
   {
     variants: {
       variant: {
@@ -9,7 +9,7 @@ export const ctaVariants = cva(
         secondary: "bg-transparent border-[1.5px] border-white text-white",
       },
       size: {
-        small: ["px-4 py-2 text-sm"],
+        small: ["px-4 py-3 text-sm"],
         medium: ["px-4 py-3"],
         large: ["px-4 py-2 text-2xl"],
       },

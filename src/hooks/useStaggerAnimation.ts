@@ -9,7 +9,7 @@ export default function useStaggerAnimation(
   staggerDelay = 0.1,
   initialDelay = 0.3
 ) {
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;

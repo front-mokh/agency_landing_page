@@ -22,19 +22,19 @@ export default function BenefitsSection() {
 function BenefitsCard() {
   return (
     <div className="relative p-8 lg:p-12 bg-light rounded-xl shadow-[rgba(0,_0,_0,_0.1)_0px_60px_40px_-7px]">
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-16">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-12">
         <div className="col-span-1 lg:col-span-2 w-full">
           <Tagline animated alignment="left">
-            VOTRE RÉUSSITE EN LIGNE
+            VOTRE RÉUSSITE NUMÉRIQUE
           </Tagline>
           <Headline
             alignment="left"
             animated
-            className="lg:text-4xl lg:leading-[1.3] max-w-[35ch]"
+            className="lg:text-[2rem] lg:leading-[1.3] tracking-wide max-w-[35ch]"
           >
-            Renforcez Votre Entreprise avec un{" "}
+            RRENFORCEZ VOTRE ENTREPRISE AVEC NOS{" "}
             <span className="underline underline-offset-[6px] decoration-highlight ">
-              Site Web Professionnel
+              SOLUTIONS LOGICIELLES PROFESSIONNELLES
             </span>
           </Headline>
         </div>
