@@ -11,7 +11,7 @@ import Container from "../utils/Container";
 export default function ContactBanner() {
   return (
     <Section className="min-h-0 p-0">
-      <Container>
+      <Container className="p-0">
         <Banner />
         <BackgroundPatterns />
       </Container>
@@ -21,7 +21,7 @@ export default function ContactBanner() {
 
 function Banner() {
   return (
-    <div className="bg-inverted flex flex-col justify-center rounded-lg w-full md:min-h-96 p-6">
+    <div className="bg-inverted flex flex-col justify-center rounded-0 md:rounded-lg w-full md:min-h-96 p-6">
       <div className="z-10 flex flex-col items-center justify-center">
         <Headline  className="text-light-primary max-w-[35ch] font-semibold text-xl">
           PRÊT À COMMANCER VOTRE PRÉSENCE WEB PROFESSIONNELLE ?
