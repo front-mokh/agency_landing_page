@@ -86,11 +86,11 @@ export default function Header() {
     <header
       ref={headerRef}
       className={clsx(
-        "fixed top-0 left-0 w-full z-50 py-2",
-        isOpen && "h-screen"
+        "fixed top-0 left-0 w-full z-50 py-2 transition-all duration-200",
+        isOpen && "h-screen bg-dark"
       )}
     >
-      <Container className="flex flex-row justify-between items-center">
+      <Container className="flex flex-row justify-between items-start">
         <Link
           href="/"
           onClick={closeMenu}
@@ -114,11 +114,11 @@ export default function Header() {
                 <NavLink {...link} onClick={closeMenu} />
               </li>
             ))}
-            <li>
+            {/* <li>
               <CallToAction size="small" href="/contact">
                 devis gratuit
               </CallToAction>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -139,7 +139,7 @@ function MobileMenuToggle({
   return (
     <button
       onClick={() => setIsOpen((prev) => !prev)}
-      className="block md:hidden relative w-8 h-6 focus:outline-none"
+      className={clsx("block md:hidden  relative w-8 h-6 focus:outline-none",{"my-auto":!isOpen},{"mt-3":isOpen})}
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
       aria-label="Toggle mobile menu"

@@ -57,25 +57,28 @@ function ProductCard({
       </div>
       <div>
         <p className="text-lg font-medium">{subtitle}</p>
-        <p className="text-dark-secondary">{description}</p>
+        <p className="pt-1 text-dark-secondary">{description}</p>
       </div>
-      <CallToAction href={"/"} size={"small"}>
-        voir la démo en direct{" "}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="size-5"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-          />
-        </svg>
-      </CallToAction>
+      <div className="flex gap-2">
+        <CallToAction  className="w-full text-center" href="/">voir les détails</CallToAction>
+        <CallToAction variant={"secondary"} className="border-[#25344f] text-dark-primary w-full text-center" href={"/"} size={"small"}>
+          voir la démo en direct{" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="size-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+        </CallToAction>
+      </div>
     </div>
   );
 }
