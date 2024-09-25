@@ -60,18 +60,17 @@ function HeroSection() {
       <Container size="large">
         <h1
           ref={titleRef}
-          className="font-heading uppercase text-center text-3xl md:text-5xl lg:text-6xl lg:leading-[130%] font-bold mb-8 tracking-wide"
+          className="md:max-w-[22ch] font-heading uppercase text-center text-2xl md:text-5xl lg:text-6xl lg:leading-[130%] font-bold mb-8 tracking-wide"
         >
-          Besoin d&apos;un{" "}
+          solution logicielle
           <span className="relative inline-block px-1">
-            <span>site web</span>
+            <span>professionnelle</span>
             <span
               ref={highlightRef}
               className="absolute -z-10 w-full h-full left-0 top-0 bg-highlight"
             ></span>
           </span>{" "}
-          ? <br />
-          Nous avons la solution
+          pour tous vos besoins
         </h1>
         <p
           ref={subtitleRef}
@@ -96,10 +95,13 @@ function HeroSection() {
         </p>
         <div
           ref={ctaRef}
-          className="flex flex-col justify-center md:flex-row gap-4 mt-8"
+          className="w-full flex flex-col justify-center md:flex-row gap-4 mt-8"
         >
-          <CallToAction size="medium" variant="primary" href="/contact">
-            Obtenez un devis gratuit
+          <CallToAction className="w-full" size="medium" variant="primary" href="/contact">
+          Contacter Nous
+          </CallToAction>
+          <CallToAction className="w-full" size="medium" variant="secondary" href="/contact">
+            Nos Produits
           </CallToAction>
         </div>
       </Container>
