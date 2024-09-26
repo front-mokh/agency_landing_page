@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ContactForm() {
   return (
-    <form className="flex flex-col gap-3 rounded-md text-light-secondary">
+    <form className="flex flex-col gap-4 rounded-md text-light-secondary">
       <div className="flex flex-col gap-1">
         <label htmlFor="name">Nom et prénom</label>
         <input
