@@ -48,7 +48,7 @@ function ProductCard({
   features: string[];
 }) {
   return (
-    <div className="flex flex-col gap-6 p-6 rounded-lg bg-mid-tone shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="flex flex-col gap-6 p-4 rounded-md bg-mid-tone ">
       <h3 className="text-2xl font-medium text-center">{title}</h3>
       <div className="relative mx-auto w-full aspect-video border-2 rounded-md overflow-hidden">
         <Image
