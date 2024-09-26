@@ -18,7 +18,7 @@ export default function ProductsSection() {
         </Headline>
         <div
           ref={containerRef as React.Ref<HTMLDivElement>}
-          className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-36"
+          className="mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-24"
         >
           {products.map((product, index) => (
             <div key={index}>
@@ -26,6 +26,7 @@ export default function ProductsSection() {
                 title={product.title}
                 subtitle={product.subtitle}
                 description={product.description}
+                features={product.features}
               />
             </div>
           ))}
@@ -39,13 +40,15 @@ function ProductCard({
   title,
   subtitle,
   description,
+  features,
 }: {
   title: string;
   subtitle: string;
   description: string;
+  features: string[];
 }) {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 p-6 rounded-lg bg-mid-tone shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <h3 className="text-2xl font-medium text-center">{title}</h3>
       <div className="relative mx-auto w-full aspect-video border-2 rounded-md overflow-hidden">
         <Image
@@ -57,12 +60,27 @@ function ProductCard({
       </div>
       <div>
         <p className="text-lg font-medium">{subtitle}</p>
-        <p className="pt-1 text-dark-secondary">{description}</p>
+        {/* <p className="pt-1 text-dark-secondary">{description}</p> */}
+        <ul className="mt-4 space-y-2">
+          {features.map((feature) => (
+            <li className="text-dark-secondary flex gap-2">
+              <Image src={"/icons/check.svg"} alt={""} width={24} height={24} />
+              {feature}
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="flex flex-col  md:flex-row gap-2">
-        <CallToAction  className="w-full text-center" href="/">voir les détails</CallToAction>
-        <CallToAction variant={"secondary"} className="border-[#25344f] text-dark-primary w-full text-center" href={"/"} size={"small"}>
-          voir la démo en direct{" "}
+        <CallToAction className="w-full text-center" href="/">
+        voir les détails
+        </CallToAction>
+        <CallToAction
+          variant={"secondary"}
+          className="border-[#25344f] text-dark-primary w-full text-center"
+          href={"/"}
+          
+        >
+         démo en direct
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

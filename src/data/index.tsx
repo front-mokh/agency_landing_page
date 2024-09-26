@@ -104,6 +104,11 @@ export const products = [
     subtitle: "Plateforme e-commerce tout-en-un",
     description:
       "Optimisez vos ventes en ligne avec notre solution complète de gestion de boutique en ligne.",
+    features: [
+      "Gestion complète des produits et des ventes",
+      "Gestion des clients et des livraisons",
+      "Assistance 24h/24 et 7j/7",
+    ],
   },
   {
     imagePath: "/icons/seo.svg",
@@ -111,6 +116,11 @@ export const products = [
     subtitle: "Gestion de cabinet dentaire simplifiée",
     description:
       "Rationalisez vos opérations cliniques et améliorez l'expérience patient avec notre logiciel spécialisé.",
+    features: [
+      "Gestion complète des produits et des ventes",
+      "Gestion des clients et des livraisons",
+      "Assistance 24h/24 et 7j/7",
+    ],
   },
 ];
 export const services = [
