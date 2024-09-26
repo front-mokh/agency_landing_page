@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Section from "../utils/Section";
 import Container from "../utils/Container";
 import CallToAction from "../CallToAction";
+import Gradient from "../Gradient";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +20,7 @@ function HeroSection() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      gsap.set([titleRef.current, subtitleRef.current, ctaRef.current, secondaryCtaRef], {
+      gsap.set([titleRef.current, subtitleRef.current, ctaRef.current], {
         opacity: 0,
         y: 30,
       });
@@ -56,8 +58,21 @@ function HeroSection() {
   }, []);
 
   return (
-    <Section background="dark">
-      <SvgBackground />
+    <Section background="dark" className="relative overflow-y-visible">
+      {/* <SvgBackground /> */}
+      {/* <Gradient /> */}
+      <Image
+        src={"/grid.svg"}
+        alt={""}
+        layout="fill"
+        objectFit="cover"
+      />
+       {/* <Image
+        src={"/patterns/grid.svg"}
+        alt={""}
+        layout="fill"
+        objectFit="cover"
+      /> */}
       <Container size="large">
         <h1
           ref={titleRef}
@@ -95,13 +110,13 @@ function HeroSection() {
           , n&apos;est-ce pas ce que vous voulez ?
         </p>
         <div
-          
+          ref={ctaRef}
           className="w-full flex flex-col justify-center md:flex-row gap-4 mt-8"
         >
           <div ref={ctaRef} className="w-full md:w-60">
             <CallToAction
               size="medium"
-              className="w-full "
+              className="w-full"
               variant="primary"
               href="/contact"
             >

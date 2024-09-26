@@ -15,7 +15,7 @@ import useStaggerAnimation from "@/hooks/useStaggerAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function FeatureCard({
+function ServiceCard({
   feature,
 }: {
   feature: { imagePath: string; title: string; description: string };
@@ -59,9 +59,9 @@ function ServicesSection() {
   return (
     <Section>
       <Container className="">
-        <Tagline animated>La Qualité, Notre Priorité</Tagline>
+        <Tagline animated>couvre tous vos besoins</Tagline>
         <Headline animated className="max-w-[35ch]">
-          Un site professionnel qui parle à vos clients
+          découvrez nos divers services
         </Headline>
         <div
           ref={containerRef as React.Ref<HTMLDivElement>}
@@ -69,7 +69,7 @@ function ServicesSection() {
         >
           {features.map((feature, index) => (
             <div key={index}>
-              <FeatureCard feature={feature} />
+              <ServiceCard feature={feature} />
             </div>
           ))}
         </div>

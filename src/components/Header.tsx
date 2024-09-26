@@ -35,8 +35,11 @@ export const useScrollBehavior = () => {
   return { isAtTop, isVisible };
 };
 
-// Custom hook for GSAP animations
-export const useHeaderAnimation = (isOpen:boolean, isAtTop: boolean, isVisible: boolean) => {
+export const useHeaderAnimation = (
+  isOpen: boolean,
+  isAtTop: boolean,
+  isVisible: boolean
+) => {
   const headerRef = useRef(null);
 
   const pathname = usePathname();
@@ -44,12 +47,12 @@ export const useHeaderAnimation = (isOpen:boolean, isAtTop: boolean, isVisible: 
     const header = headerRef.current;
     if (!header) return;
 
+    console.log(isOpen);
+
     gsap.to(header, {
       duration: 0.3,
-      backgroundColor:
-        isAtTop &&  isOpen && pathname === "/"
-          ? "rgba(0, 0, 0, 0)"
-          : "#25344F",
+      backgroundColor: "#25344F",
+      // isAtTop && pathname === "/" ? "rgba(0, 0, 0, 0)" : "#25344F",
       backdropFilter: isAtTop ? "blur(0px)" : "blur(4px)",
       ease: "power2.out",
     });
@@ -67,7 +70,7 @@ export const useHeaderAnimation = (isOpen:boolean, isAtTop: boolean, isVisible: 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isAtTop, isVisible } = useScrollBehavior();
-  const headerRef = useHeaderAnimation(isOpen,isAtTop, isVisible);
+  const headerRef = useHeaderAnimation(isOpen, isAtTop, isVisible);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -139,7 +142,11 @@ function MobileMenuToggle({
   return (
     <button
       onClick={() => setIsOpen((prev) => !prev)}
-      className={clsx("block md:hidden  relative w-8 h-6 focus:outline-none",{"my-auto":!isOpen},{"mt-3":isOpen})}
+      className={clsx(
+        "block md:hidden  relative w-8 h-6 focus:outline-none",
+        { "my-auto": !isOpen },
+        { "mt-3": isOpen }
+      )}
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
       aria-label="Toggle mobile menu"

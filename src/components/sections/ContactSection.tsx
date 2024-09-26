@@ -13,6 +13,12 @@ export default function ContactSection() {
   return (
     <Section id="contact" background="dark">
       <ContactGradient />
+      {/* <Image
+        src={"/grid.svg"}
+        alt={""}
+        layout="fill"
+        objectFit="cover"
+      /> */}
       <Container className="grid md:grid-cols-2 gap-12">
         <div>
           <Headline animated>Contactez-nous maintenant</Headline>

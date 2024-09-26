@@ -15,7 +15,7 @@ export default function HomePage() {
       <HeroSection />
       <BenefitsSection />
       <ProductsSection/>
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       {/* <AboutSection /> */}
       <ContactBanner />
       <FAQSection />

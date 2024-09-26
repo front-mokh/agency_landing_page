@@ -70,30 +70,56 @@ export const benefits = [
   },
 ];
 
+// export const features = [
+//   {
+//     imagePath: "/icons/satisfaction.svg",
+//     title: "Expérience Client Exceptionnelle",
+//     description:
+//       "Un site web centré sur vos clients. Nous créons des parcours utilisateurs intuitifs et engageants qui transforment les visiteurs en clients fidèles. Chaque interaction renforce votre relation client.",
+//   },
+//   {
+//     imagePath: "/icons/seo.svg",
+//     title: "Visibilité Optimale sur Google",
+//     description:
+//       "Propulsez votre site en tête des résultats de recherche. Notre optimisation pointue assure que vos clients potentiels vous trouvent facilement, boostant votre visibilité et vos opportunités d'affaires.",
+//   },
+//   {
+//     imagePath: "/icons/performance.svg",
+//     title: "Performance Ultra-Rapide",
+//     description:
+//       "Un site web à la vitesse de l'éclair. Avec un score de performance de 100/100, vos pages se chargent instantanément, améliorant l'expérience utilisateur, réduisant le taux de rebond et renforçant votre position dans les classements.",
+//   },
+//   {
+//     imagePath: "/icons/responsive.svg",
+//     title: "Design Adaptatif Intelligent",
+//     description:
+//       "Une expérience fluide sur tous les appareils. Votre site s'ajuste parfaitement aux smartphones, tablettes et ordinateurs, assurant une présentation impeccable et une navigation intuitive pour chaque visiteur.",
+//   },
+// ];
 export const features = [
   {
-    imagePath: "/icons/satisfaction.svg",
-    title: "Expérience Client Exceptionnelle",
-    description:
-      "Un site web centré sur vos clients. Nous créons des parcours utilisateurs intuitifs et engageants qui transforment les visiteurs en clients fidèles. Chaque interaction renforce votre relation client.",
-  },
-  {
     imagePath: "/icons/seo.svg",
-    title: "Visibilité Optimale sur Google",
+    title: "sites Web vitrines",
     description:
-      "Propulsez votre site en tête des résultats de recherche. Notre optimisation pointue assure que vos clients potentiels vous trouvent facilement, boostant votre visibilité et vos opportunités d'affaires.",
+      "Créez une présence en ligne attrayante pour votre entreprise. Notre équipe conçoit des sites vitrines élégants et fonctionnels qui mettent en valeur vos produits et services, captivant vos visiteurs et les incitant à passer à l'action.",
   },
   {
-    imagePath: "/icons/performance.svg",
-    title: "Performance Ultra-Rapide",
+    imagePath: "/icons/cart.svg",
+    title: "sites de e-commerce",
     description:
-      "Un site web à la vitesse de l'éclair. Avec un score de performance de 100/100, vos pages se chargent instantanément, améliorant l'expérience utilisateur, réduisant le taux de rebond et renforçant votre position dans les classements.",
+      "Lancez votre boutique en ligne performante. Nous développons des plateformes e-commerce intuitives et sécurisées, optimisées pour les conversions et offrant une expérience d'achat fluide sur tous les appareils.",
   },
   {
-    imagePath: "/icons/responsive.svg",
-    title: "Design Adaptatif Intelligent",
+    imagePath: "/icons/managment.svg",
+    title: "logiciels de gestion",
     description:
-      "Une expérience fluide sur tous les appareils. Votre site s'ajuste parfaitement aux smartphones, tablettes et ordinateurs, assurant une présentation impeccable et une navigation intuitive pour chaque visiteur.",
+      "Optimisez vos opérations avec nos solutions sur mesure. Nous créons des logiciels de gestion adaptés à vos besoins spécifiques, automatisant vos processus et améliorant l'efficacité de votre entreprise.",
+  },
+  {
+    imagePath: "/icons/custom.svg",
+    title: "logicielles personnalisées",
+    description:
+      "Concrétisez vos idées avec des applications uniques. Notre équipe développe des logiciels personnalisés innovants qui répondent précisément à vos exigences, vous donnant un avantage concurrentiel dans votre secteur.",
   },
 ];
 
