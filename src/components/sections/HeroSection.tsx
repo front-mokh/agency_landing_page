@@ -18,7 +18,7 @@ function HeroSection() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      gsap.set([titleRef.current, subtitleRef.current, ctaRef.current], {
+      gsap.set([titleRef.current, subtitleRef.current, ctaRef.current, secondaryCtaRef], {
         opacity: 0,
         y: 30,
       });
