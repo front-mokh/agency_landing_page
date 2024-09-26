@@ -26,7 +26,7 @@ export default function ContactSection() {
 
 function CATList() {
   return (
-    <div className="flex flex-col md:flex-row gap-4 mt-10 md:mt-16">
+    <div className="hidden md:flex flex-col md:flex-row gap-4 mt-10 md:mt-16">
       {ctaList.map((item, index) => (
         <div key={index} className="flex items-center gap-1">
           <Image src={"/icons/check.svg"} alt={""} width={24} height={24} />

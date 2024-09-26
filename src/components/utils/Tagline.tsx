@@ -18,7 +18,7 @@ export default function Tagline({
       <div ref={ref} className="flex gap-2 items-center mb-2">
         <span className="w-8 h-[2px] rounded-md bg-highlight"></span>
         <span className="overflow-hidden">
-          <span className="inline-block text-highlight font-semibold font-heading uppercase tracking-wider">
+          <span className="inline-block text-highlight font-semibold font-heading uppercase tracking-wider text-sm md:text-base">
             {children}
           </span>
         </span>
