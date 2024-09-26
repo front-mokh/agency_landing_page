@@ -12,6 +12,7 @@ function HeroSection() {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const ctaRef = useRef(null);
+  const secondaryCtaRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -39,7 +40,7 @@ function HeroSection() {
           "-=0.2"
         )
         .to(
-          [subtitleRef.current, ctaRef.current],
+          [subtitleRef.current, ctaRef.current, secondaryCtaRef.current],
           {
             duration: 1.1,
             ease: "power2.out",
@@ -94,15 +95,29 @@ function HeroSection() {
           , n&apos;est-ce pas ce que vous voulez ?
         </p>
         <div
-          ref={ctaRef}
+          
           className="w-full flex flex-col justify-center md:flex-row gap-4 mt-8"
         >
-          <CallToAction className="w-full md:w-60" size="medium" variant="primary" href="/contact">
-          Contactez-Nous
-          </CallToAction>
-          <CallToAction className="w-full md:w-60" size="medium" variant="secondary" href="/contact">
-            Voir Nos Produits
-          </CallToAction>
+          <div ref={ctaRef} className="w-full md:w-60">
+            <CallToAction
+              size="medium"
+              className="w-full "
+              variant="primary"
+              href="/contact"
+            >
+              Contactez-Nous
+            </CallToAction>
+          </div>
+          <div ref={secondaryCtaRef} className="w-full md:w-60">
+            <CallToAction
+              className="w-full "
+              size="medium"
+              variant="secondary"
+              href="/contact"
+            >
+              Explorer Nos Produits
+            </CallToAction>
+          </div>
         </div>
       </Container>
     </Section>
