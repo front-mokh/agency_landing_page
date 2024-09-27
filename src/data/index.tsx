@@ -96,27 +96,31 @@ export const benefits = [
 //       "Une expérience fluide sur tous les appareils. Votre site s'ajuste parfaitement aux smartphones, tablettes et ordinateurs, assurant une présentation impeccable et une navigation intuitive pour chaque visiteur.",
 //   },
 // ];
-export const features = [
+export const services = [
   {
     imagePath: "/icons/seo.svg",
+    link: "/services/#landing-page",
     title: "sites Web vitrines",
     description:
       "Créez une présence en ligne attrayante pour votre entreprise. Notre équipe conçoit des sites vitrines élégants et fonctionnels qui mettent en valeur vos produits et services, captivant vos visiteurs et les incitant à passer à l'action.",
   },
   {
     imagePath: "/icons/cart.svg",
+    link: "/services/#e-commerce",
     title: "sites de e-commerce",
     description:
       "Lancez votre boutique en ligne performante. Nous développons des plateformes e-commerce intuitives et sécurisées, optimisées pour les conversions et offrant une expérience d'achat fluide sur tous les appareils.",
   },
   {
     imagePath: "/icons/managment.svg",
+    link: "/services/#management",
     title: "logiciels de gestion",
     description:
       "Optimisez vos opérations avec nos solutions sur mesure. Nous créons des logiciels de gestion adaptés à vos besoins spécifiques, automatisant vos processus et améliorant l'efficacité de votre entreprise.",
   },
   {
     imagePath: "/icons/custom.svg",
+    link: "/services/#custom-software",
     title: "logicielles personnalisées",
     description:
       "Concrétisez vos idées avec des applications uniques. Notre équipe développe des logiciels personnalisés innovants qui répondent précisément à vos exigences, vous donnant un avantage concurrentiel dans votre secteur.",
@@ -149,84 +153,139 @@ export const products = [
     ],
   },
 ];
-export const services = [
-  {
-    iconPath: "/icons/code.svg",
-    title: "Conception et développement Web",
-    description: [
-      "Nous concevons et développons votre site web pour mettre en valeur votre expertise et attirer plus de clients",
-    ],
-    longDescription:
-      "Notre service de conception et développement web est conçu pour créer des sites internet sur mesure qui répondent aux besoins uniques de votre entreprise. Que vous soyez une petite entreprise, un professionnel indépendant ou une agence, nous vous aidons à bâtir une présence en ligne performante et efficace.",
-    motivations: [
-      "Renforcez votre crédibilité avec un site qui inspire confiance.",
-      "Attirez de nouveaux clients grâce à un site optimisé.",
-      "Démarquez-vous de la concurrence avec un design unique.",
-      "Améliorez l’expérience utilisateur avec une navigation intuitive.",
-      "Adaptez-vous aux évolutions du marché avec un site flexible.",
-      "Maximisez votre retour sur investissement avec des résultats tangibles.",
-    ],
-    features: [
-      {
-        title: "Centré sur l'Expérience Utilisateur",
-        description:
-          "Votre site sera facile à utiliser, permettant des modifications rapides, comme changer un texte ou ajouter une page.",
-      },
-      {
-        title: "Optimisé pour la Conversion",
-        description:
-          "Nous transformons vos visiteurs en clients fidèles en optimisant chaque détail pour maximiser votre rentabilité.",
-      },
-      {
-        title: "Optimisé pour le Mobile",
-        description:
-          "Chaque page est adaptée pour une navigation fluide sur mobile, essentielle pour plus de la moitié des utilisateurs.",
-      },
-      {
-        title: "Vitesse et Performance",
-        description:
-          "Votre site sera rapide et performant, assurant une expérience utilisateur agréable même lors des pics de trafic.",
-      },
-      {
-        title: "Optimisé pour les Moteurs de Recherche",
-        description:
-          "Votre site sera facilement trouvable, augmentant sa visibilité sur les moteurs de recherche pour attirer plus de visiteurs.",
-      },
-      {
-        title: "Design Moderne",
-        description:
-          "Votre site sera unique, reflétant parfaitement le style de votre marque avec des polices, des icônes et des couleurs adaptées.",
-      },
-    ],
-  },
-  {
-    iconPath: "/icons/search.svg",
-    title: "Optimisation du Référencement (SEO)",
-    description: [
-      "Optimisation SEO pour propulser votre site en tête des résultats Google et attirer plus de trafic qualifié.",
-    ],
-  },
-  // {
-  //   title: "Optimisation des Sites Web",
-  //   description: [
-  //     "Vos clients n'aiment pas votre site ? Nous ",
 
-  //     <span key={1} className="font-medium text-dark-primary/90">
-  //       améliorons la performance et l&apos;expérience utilisateur
-  //     </span>,
-  //     " pour les convaincre.",
-  //     <br key={2} />,
-  //     // <ServiceLink key={3} href="/services/optimisation-sites" />,
-  //   ],
-  // },
-  {
-    iconPath: "/icons/refresh.svg",
-    title: ["Actualisation des", <br key={0} />, " Sites Web"],
-    description: [
-      "Nous assurons la mise à jour et l'évolution de votre site pour qu'il reste performant et adapté à vos besoins",
-    ],
-  },
-];
+export const landingPageService = {
+  iconPath: "/icons/code.svg",
+  title: "Conception et développement Web",
+  description:
+    "Nous concevons et développons votre site web pour mettre en valeur votre expertise et attirer plus de clients",
+
+  longDescription:
+    "Notre service de conception et développement web est conçu pour créer des sites internet sur mesure qui répondent aux besoins uniques de votre entreprise. Que vous soyez une petite entreprise, un professionnel indépendant ou une agence, nous vous aidons à bâtir une présence en ligne performante et efficace.",
+  benefitsTitle: "LES AVANTAGES D'UN SITE WEB PROFESSIONNEL",
+  benefitsTagline: "MAXIMISEZ VOTRE PRÉSENCE EN LIGNE",
+  benefits: [
+    "Renforcez votre crédibilité avec un site qui inspire confiance.",
+    "Attirez de nouveaux clients grâce à un site optimisé.",
+    "Démarquez-vous de la concurrence avec un design unique.",
+    "Améliorez l’expérience utilisateur avec une navigation intuitive.",
+    "Adaptez-vous aux évolutions du marché avec un site flexible.",
+    "Maximisez votre retour sur investissement avec des résultats tangibles.",
+  ],
+  featuresTitle: "CARACTÉRISTIQUES CLÉS DE VOTRE SITE WEB",
+  featuresTagline: " CONÇU POUR EXCELLER DANS TOUS LES ASPECTS",
+  features: [
+    {
+      title: "Centré sur l'Expérience Utilisateur",
+      description:
+        "Votre site sera facile à utiliser, permettant des modifications rapides, comme changer un texte ou ajouter une page.",
+    },
+    {
+      title: "Optimisé pour la Conversion",
+      description:
+        "Nous transformons vos visiteurs en clients fidèles en optimisant chaque détail pour maximiser votre rentabilité.",
+    },
+    {
+      title: "Optimisé pour le Mobile",
+      description:
+        "Chaque page est adaptée pour une navigation fluide sur mobile, essentielle pour plus de la moitié des utilisateurs.",
+    },
+    {
+      title: "Vitesse et Performance",
+      description:
+        "Votre site sera rapide et performant, assurant une expérience utilisateur agréable même lors des pics de trafic.",
+    },
+    {
+      title: "Optimisé pour les Moteurs de Recherche",
+      description:
+        "Votre site sera facilement trouvable, augmentant sa visibilité sur les moteurs de recherche pour attirer plus de visiteurs.",
+    },
+    {
+      title: "Design Moderne",
+      description:
+        "Votre site sera unique, reflétant parfaitement le style de votre marque avec des polices, des icônes et des couleurs adaptées.",
+    },
+  ],
+  faq: [{ question: "dwwwwwwwwwwwwwwww", answer: "ddddddddddddddddddd" }],
+};
+// export const fullServices = [
+//   {
+//     iconPath: "/icons/code.svg",
+//     title: "Conception et développement Web",
+//     description: [
+//       "Nous concevons et développons votre site web pour mettre en valeur votre expertise et attirer plus de clients",
+//     ],
+//     longDescription:
+//       "Notre service de conception et développement web est conçu pour créer des sites internet sur mesure qui répondent aux besoins uniques de votre entreprise. Que vous soyez une petite entreprise, un professionnel indépendant ou une agence, nous vous aidons à bâtir une présence en ligne performante et efficace.",
+//     motivations: [
+//       "Renforcez votre crédibilité avec un site qui inspire confiance.",
+//       "Attirez de nouveaux clients grâce à un site optimisé.",
+//       "Démarquez-vous de la concurrence avec un design unique.",
+//       "Améliorez l’expérience utilisateur avec une navigation intuitive.",
+//       "Adaptez-vous aux évolutions du marché avec un site flexible.",
+//       "Maximisez votre retour sur investissement avec des résultats tangibles.",
+//     ],
+//     features: [
+//       {
+//         title: "Centré sur l'Expérience Utilisateur",
+//         description:
+//           "Votre site sera facile à utiliser, permettant des modifications rapides, comme changer un texte ou ajouter une page.",
+//       },
+//       {
+//         title: "Optimisé pour la Conversion",
+//         description:
+//           "Nous transformons vos visiteurs en clients fidèles en optimisant chaque détail pour maximiser votre rentabilité.",
+//       },
+//       {
+//         title: "Optimisé pour le Mobile",
+//         description:
+//           "Chaque page est adaptée pour une navigation fluide sur mobile, essentielle pour plus de la moitié des utilisateurs.",
+//       },
+//       {
+//         title: "Vitesse et Performance",
+//         description:
+//           "Votre site sera rapide et performant, assurant une expérience utilisateur agréable même lors des pics de trafic.",
+//       },
+//       {
+//         title: "Optimisé pour les Moteurs de Recherche",
+//         description:
+//           "Votre site sera facilement trouvable, augmentant sa visibilité sur les moteurs de recherche pour attirer plus de visiteurs.",
+//       },
+//       {
+//         title: "Design Moderne",
+//         description:
+//           "Votre site sera unique, reflétant parfaitement le style de votre marque avec des polices, des icônes et des couleurs adaptées.",
+//       },
+//     ],
+//   },
+//   {
+//     iconPath: "/icons/search.svg",
+//     title: "Optimisation du Référencement (SEO)",
+//     description: [
+//       "Optimisation SEO pour propulser votre site en tête des résultats Google et attirer plus de trafic qualifié.",
+//     ],
+//   },
+//   // {
+//   //   title: "Optimisation des Sites Web",
+//   //   description: [
+//   //     "Vos clients n'aiment pas votre site ? Nous ",
+
+//   //     <span key={1} className="font-medium text-dark-primary/90">
+//   //       améliorons la performance et l&apos;expérience utilisateur
+//   //     </span>,
+//   //     " pour les convaincre.",
+//   //     <br key={2} />,
+//   //     // <ServiceLink key={3} href="/services/optimisation-sites" />,
+//   //   ],
+//   // },
+//   {
+//     iconPath: "/icons/refresh.svg",
+//     title: ["Actualisation des", <br key={0} />, " Sites Web"],
+//     description: [
+//       "Nous assurons la mise à jour et l'évolution de votre site pour qu'il reste performant et adapté à vos besoins",
+//     ],
+//   },
+// ];
 
 export const processSteps = [
   {

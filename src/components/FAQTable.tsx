@@ -111,7 +111,11 @@ export function FAQItem({
   );
 }
 
-export default function FAQTable() {
+export default function FAQTable({
+  faq,
+}: {
+  faq: { question: string; answer: string }[];
+}) {
   const containerRef = useStaggerAnimation();
   return (
     <div className="mt-16 max-w-5xl mx-auto">

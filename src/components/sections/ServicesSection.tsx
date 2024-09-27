@@ -10,30 +10,43 @@ import Tagline from "../utils/Tagline";
 import Headline from "../utils/Headline";
 import Section from "../utils/Section";
 import Container from "../utils/Container";
-import { features } from "@/data";
+import { services } from "@/data";
 import useStaggerAnimation from "@/hooks/useStaggerAnimation";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ServiceCard({
-  feature,
+  service,
 }: {
-  feature: { imagePath: string; title: string; description: string };
+  service: {
+    imagePath: string;
+    link: string;
+    title: string;
+    description: string;
+  };
 }) {
   return (
-    <div
+    <Link
+      href={service.link}
       className={twMerge(
         clsx(
-          "relative bg-gradient-to-br from-mid-tone via-mid-tone/50 to-mid-tone/90 rounded-xl p-6 overflow-hidden transition-all duration-300"
+          "group relative block bg-gradient-to-br from-mid-tone via-mid-tone/50 to-mid-tone/90 rounded-xl p-6 overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2"
         )
       )}
     >
-      <Image src={feature.imagePath} alt="" width={42} height={42} />
+      <Image
+        src={service.imagePath}
+        alt=""
+        width={42}
+        height={42}
+        className="transition-all duration-300 group-hover:scale-[1.2]"
+      />
       <Headline level={2} alignment="left" className="mt-4 font-bold">
-        {feature.title}
+        {service.title}
       </Headline>
       <p className="mt-4 leading-[1.8] text-dark-secondary font-medium">
-        {feature.description}
+        {service.description}
       </p>
 
       <Image
@@ -41,16 +54,10 @@ function ServiceCard({
         alt=""
         width={256}
         height={256}
-        className="absolute bottom-0 left-0"
+        className="absolute bottom-0 -left-14 transition-all duration-300 group-hover:left-0"
       />
-      {/* <Image
-        className="absolute opacity-10 z-10 -right-10 top-1/2"
-        src={feature.imagePath}
-        alt=""
-        width={200}
-        height={200}
-      /> */}
-    </div>
+     
+    </Link>
   );
 }
 
@@ -67,9 +74,9 @@ function ServicesSection() {
           ref={containerRef as React.Ref<HTMLDivElement>}
           className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-10"
         >
-          {features.map((feature, index) => (
+          {services.map((service, index) => (
             <div key={index}>
-              <ServiceCard feature={feature} />
+              <ServiceCard service={service} />
             </div>
           ))}
         </div>

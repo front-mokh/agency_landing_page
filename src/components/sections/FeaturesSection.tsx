@@ -3,7 +3,7 @@ import Section from "../utils/Section";
 import Container from "../utils/Container";
 import Headline from "../utils/Headline";
 import Image from "next/image";
-import { features } from "@/data";
+import { services } from "@/data";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -13,7 +13,7 @@ export default function FeaturesSection() {
       <Container>
         <Headline className="max-w-[40ch]">Pourquoi Nos Sites Web Sont Parfaits pour Votre Entreprise</Headline>
 
-        {features.map((feature, index) => (
+        {services.map((feature, index) => (
           <Section
             key={index}
             padding="small"

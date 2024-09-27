@@ -3,7 +3,7 @@ import Section from "../utils/Section";
 import Container from "../utils/Container";
 import Tagline from "../utils/Tagline";
 import Headline from "../utils/Headline";
-import { features, products } from "@/data";
+import { services, products } from "@/data";
 import Image from "next/image";
 import CallToAction from "../CallToAction";
 

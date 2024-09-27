@@ -25,7 +25,7 @@ export default function useStaggerAnimation(
 
     tl.fromTo(
       elements,
-      { y: 7.5, scale: 1.01 },
+      { y: 15, scale: 1.04 },
       {
         y: 0,
         scale: 1,
