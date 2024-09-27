@@ -312,8 +312,8 @@ export const ctaList = [
   { label: "Boostez votre croissance" },
 ];
 export const footerLinks = [
-  { href: "/#about", label: "About" },
-  { href: "/#projects", label: "Projects" },
+  { href: "/#about", label: "À Propos" },
+  { href: "/products", label: "Produits" },
   { href: "/faq", label: "Questions Fréquentes" },
   { href: "/#contact", label: "Contact" },
 ];
