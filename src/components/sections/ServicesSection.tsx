@@ -13,6 +13,7 @@ import Container from "../utils/Container";
 import { services } from "@/data";
 import useStaggerAnimation from "@/hooks/useStaggerAnimation";
 import Link from "next/link";
+import TopDots from "../TopDots";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +32,7 @@ function ServiceCard({
       href={service.link}
       className={twMerge(
         clsx(
-          "group relative block bg-gradient-to-br from-mid-tone via-mid-tone/50 to-mid-tone/90 rounded-xl p-6 overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2"
+          "group relative block bg-gradient-to-br from-mid-tone via-mid-tone/50 to-mid-tone/90 rounded-xl p-6 overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-[0_3px_4px_rgb(0,0,0,0.05)]"
         )
       )}
     >
@@ -40,7 +41,7 @@ function ServiceCard({
         alt=""
         width={42}
         height={42}
-        className="transition-all duration-300 group-hover:scale-[1.2]"
+        className="transition-all duration-300 group-hover:scale-[1.2] pointer-events-none select-none"
       />
       <Headline level={2} alignment="left" className="mt-4 font-bold">
         {service.title}
@@ -54,9 +55,8 @@ function ServiceCard({
         alt=""
         width={256}
         height={256}
-        className="absolute bottom-0 -left-14 transition-all duration-300 group-hover:left-0"
+        className="absolute bottom-0 -left-14 transition-all duration-300 group-hover:left-0 pointer-events-none select-none"
       />
-     
     </Link>
   );
 }
@@ -65,6 +65,7 @@ function ServicesSection() {
   const containerRef = useStaggerAnimation();
   return (
     <Section>
+      <TopDots/>
       <Container className="">
         <Tagline animated>couvre tous vos besoins</Tagline>
         <Headline animated className="max-w-[35ch]">

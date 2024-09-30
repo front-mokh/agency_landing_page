@@ -118,7 +118,7 @@ export default function FAQTable({
 }) {
   const containerRef = useStaggerAnimation();
   return (
-    <div className="mt-16 max-w-5xl mx-auto">
+    <div className="mt-16 w-full max-w-5xl mx-auto">
       <ul
         ref={containerRef as React.Ref<HTMLUListElement>}
         className="list-none p-0 space-y-2"

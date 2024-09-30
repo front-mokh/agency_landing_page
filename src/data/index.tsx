@@ -9,7 +9,6 @@ export const navLinks = [
   { href: "/services", label: "nos produits" },
   { href: "/services", label: "nos services" },
   { href: "/contact", label: "contact" },
-  // { href: "/faq", label: "faq" },
 ];
 
 // export const motivations = [
@@ -99,28 +98,28 @@ export const benefits = [
 export const services = [
   {
     imagePath: "/icons/seo.svg",
-    link: "/services/#landing-page",
+    link: "/services/landing-page",
     title: "sites Web vitrines",
     description:
       "Créez une présence en ligne attrayante pour votre entreprise. Notre équipe conçoit des sites vitrines élégants et fonctionnels qui mettent en valeur vos produits et services, captivant vos visiteurs et les incitant à passer à l'action.",
   },
   {
     imagePath: "/icons/cart.svg",
-    link: "/services/#e-commerce",
+    link: "/services/e-commerce",
     title: "sites de e-commerce",
     description:
       "Lancez votre boutique en ligne performante. Nous développons des plateformes e-commerce intuitives et sécurisées, optimisées pour les conversions et offrant une expérience d'achat fluide sur tous les appareils.",
   },
   {
     imagePath: "/icons/managment.svg",
-    link: "/services/#management",
+    link: "/services/managment-software",
     title: "logiciels de gestion",
     description:
       "Optimisez vos opérations avec nos solutions sur mesure. Nous créons des logiciels de gestion adaptés à vos besoins spécifiques, automatisant vos processus et améliorant l'efficacité de votre entreprise.",
   },
   {
     imagePath: "/icons/custom.svg",
-    link: "/services/#custom-software",
+    link: "/services/custom-software",
     title: "logicielles personnalisées",
     description:
       "Concrétisez vos idées avec des applications uniques. Notre équipe développe des logiciels personnalisés innovants qui répondent précisément à vos exigences, vous donnant un avantage concurrentiel dans votre secteur.",
@@ -129,28 +128,32 @@ export const services = [
 
 export const products = [
   {
+    link: "/products/commerce-plus",
     imagePath: "/icons/satisfaction.svg",
     title: "Commerce Plus",
-    subtitle: "Plateforme e-commerce tout-en-un",
+    subtitle: "Plateforme e-commerce complete",
     description:
-      "Optimisez vos ventes en ligne avec notre solution complète de gestion de boutique en ligne.",
+      "Commerce Plus est une solution complète pour la gestion de boutiques en ligne, offering advanced features for products, orders, and clients, simplifying online sales operations.",
     features: [
       "Gestion complète des produits et des ventes",
       "Gestion des clients et des livraisons",
       "Assistance 24h/24 et 7j/7",
     ],
+    tags: ["Web", "Mobile", "Finance", "E-commerce"],
   },
   {
+    link: "/products/dentagest",
     imagePath: "/icons/seo.svg",
     title: "DentaGest",
-    subtitle: "Gestion de cabinet dentaire simplifiée",
+    subtitle: "Logiciel de gestion pour cabinets dentaires",
     description:
-      "Rationalisez vos opérations cliniques et améliorez l'expérience patient avec notre logiciel spécialisé.",
+      "DentaGest is a software designed to optimize dental cabinet management, including appointment scheduling, patient dossier tracking, billing, enhancing operational efficiency and patient care.",
     features: [
-      "Gestion complète des produits et des ventes",
-      "Gestion des clients et des livraisons",
-      "Assistance 24h/24 et 7j/7",
+      "Gestion des rendez-vous et des dossiers patients",
+      "Facturation et gestion financière",
+      "Suivi des traitements et des stocks",
     ],
+    tags: ["Web", "Mobile", "Santé", "Gestion"],
   },
 ];
 

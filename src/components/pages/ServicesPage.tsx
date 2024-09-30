@@ -1,70 +1,65 @@
+"use client";
 import React from "react";
 import Headline from "../utils/Headline";
 import Section from "../utils/Section";
 import Container from "../utils/Container";
-import { services } from "@/data";
+import { faq, services } from "@/data";
 import Image from "next/image";
+import CallToAction from "../CallToAction";
+import ContactBanner from "../sections/ContactBanner";
+import FAQTable from "../FAQTable";
+import Tagline from "../utils/Tagline";
+import LinkButton from "../LinkButton";
 
 export default function ServicesPage() {
   return (
     <main className="overflow-hidden">
-      <Section>
-        <Container>
-          <Headline>découvrez nos divers services</Headline>
+      <Section padding={"large"}>
+        <Headline>découvrez nos divers services</Headline>
 
-          {services.map((service, index) => (
-            <Section key={index}>
-              <Container className="items-start justify-start">
-                <Headline level={2} alignment="left">
-                  {index + 1}. {service.title}
+        {services.map((service, index) => (
+          <Section
+            key={index}
+            background={index % 2 === 0 ? "none" : "light"}
+            className="overflow-hidden min-h-0"
+          >
+            <Container className="grid grid-cols-2 gap-16 items-start justify-start">
+              <div className={index % 2 !== 0 ? "order-1" : "order-2"}>
+                <Image
+                  src={service.imagePath}
+                  alt={""}
+                  width={48}
+                  height={48}
+                />
+                <Headline level={2} alignment="left" className="mt-4">
+                  {service.title}
                 </Headline>
-                <div className="gap-10">
-                  <div className="col-span-2">
-                    <p className="mt-6 leading-[1.6] max-w-[75ch] text-dark-secondary">
-                      {service.longDescription}
-                    </p>
-                    <div className="mt-6">
-                      <Headline level={3} alignment="left">
-                        Pourquoi vous en avez besoin :
-                      </Headline>
-                      <ul className="mt-2 space-y-1">
-                        {service.motivations?.map((motivation, index) => (
-                          <li key={index}>{motivation}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-24">
-                      <Headline level={3} className="lg:text-3xl">
-                        Ce que vous obtiendrez
-                      </Headline>
-                      <ul className="mt-14 grid grid-cols-3 gap-8 gap-y-12">
-                        {service.features?.map((feature, index) => (
-                          <li key={index}>
-                            <div>
-                              <Image
-                                src="icons/shuttle.svg"
-                                alt=""
-                                width={42}
-                                height={42}
-                              />
-                              <p className="mt-6 text-lg font-semibold font-heading">
-                                {feature.title}
-                              </p>
-                              <p className="mt-2 text-dark-secondary">
-                                {feature.description}
-                              </p>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div></div>
-                </div>
-              </Container>
-            </Section>
-          ))}
-        </Container>
+                <p className="mt-6 leading-[1.6] max-w-[75ch] md:text-lg text-dark-secondary">
+                  {service.description}
+                </p>
+                <LinkButton href={service.link} className="mt-4 justify-center gap-4 w-fit">
+                  Découvrez les détails
+                </LinkButton>
+              </div>
+              <div
+                className={`w-full h-full border-2 ${
+                  index % 2 === 0 ? "order-1" : "order-2"
+                }`}
+              ></div>
+            </Container>
+          </Section>
+        ))}
+        <div className="mt-24 w-full">
+          <ContactBanner />
+        </div>
+
+        <div className="mt-24 flex flex-col items-center">
+          <Tagline animated>Nous sommes là pour vous</Tagline>
+          <Headline animated className="font-semibold text-2xl md:text-4xl">
+            plus d'informations sur nos services
+          </Headline>
+          <FAQTable faq={faq} />
+        </div>
       </Section>
     </main>
   );

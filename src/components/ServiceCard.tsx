@@ -24,14 +24,14 @@ export default function ServiceCard({
       <div className="relative h-full flex flex-col">
         <div className="relative w-16 aspect-square flex items-center justify-center">
           <Image
-            
+            className="pointer-events-none select-none"
             src={`/illustrations/${index + 1}.svg`}
             alt={""}
             layout="fill"
             objectFit="contain"
           />
           <Image
-            className="relative z-10"
+            className="relative z-10 pointer-events-none select-none"
             src={iconPath}
             alt={""}
             width={28}

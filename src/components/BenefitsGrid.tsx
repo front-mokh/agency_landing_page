@@ -17,7 +17,7 @@ export default function BenefitsGrid() {
         {benefits.map((motivation, index) => (
           <div key={index} className={clsx("w-full flex flex-col items-center md:items-start gap-4")}>
             <Image
-              className=""
+              className="pointer-events-none select-none"
               src={motivation.iconPath}
               alt=""
               width={42}

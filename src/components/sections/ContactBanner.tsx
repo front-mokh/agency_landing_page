@@ -49,14 +49,14 @@ function BackgroundPatterns() {
         alt=""
         width={256}
         height={256}
-        className="absolute bottom-0 left-0"
+        className="absolute bottom-0 left-0 pointer-events-none select-none"
       />
       <Image
         src="/patterns/contact_banner_pattern.svg"
         alt=""
         width={256}
         height={256}
-        className="rotate-180 absolute top-0 right-0"
+        className="rotate-180 absolute top-0 right-0 pointer-events-none select-none"
       />
     </>
   );

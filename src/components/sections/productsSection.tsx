@@ -4,8 +4,9 @@ import Container from "../utils/Container";
 import Tagline from "../utils/Tagline";
 import Headline from "../utils/Headline";
 import { services, products } from "@/data";
-import Image from "next/image";
 import CallToAction from "../CallToAction";
+import LinkButton from "../LinkButton";
+import ProductCard from "../ProductCard";
 
 export default function ProductsSection() {
   const containerRef = useStaggerAnimation();
@@ -27,76 +28,12 @@ export default function ProductsSection() {
                 subtitle={product.subtitle}
                 description={product.description}
                 features={product.features}
+                tags={product.tags}
               />
             </div>
           ))}
         </div>
       </Container>
     </Section>
-  );
-}
-
-function ProductCard({
-  title,
-  subtitle,
-  description,
-  features,
-}: {
-  title: string;
-  subtitle: string;
-  description: string;
-  features: string[];
-}) {
-  return (
-    <div className="flex flex-col gap-6 p-4 md:p-8 rounded-md bg-mid-tone border-[1px] border-dark/[0.0025] ">
-      <h3 className="text-2xl font-medium text-center">{title}</h3>
-      <div className="relative mx-auto w-full aspect-video border-2 rounded-md overflow-hidden">
-        <Image
-          src={"/images/placeholder.jpg"}
-          alt={""}
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-      <div>
-        <p className="text-lg font-medium">{subtitle}</p>
-        {/* <p className="pt-1 text-dark-secondary">{description}</p> */}
-        <ul className="mt-4 space-y-2">
-          {features.map((feature) => (
-            <li className="text-dark-secondary flex gap-2">
-              <Image src={"/icons/check.svg"} alt={""} width={24} height={24} />
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="flex flex-col  md:flex-row gap-2">
-        <CallToAction className="w-full text-center" href="/">
-        voir les détails
-        </CallToAction>
-        <CallToAction
-          variant={"secondary"}
-          className="border-[#25344f] text-dark-primary w-full text-center"
-          href={"/"}
-          
-        >
-         démo en direct
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="size-5"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
-        </CallToAction>
-      </div>
-    </div>
   );
 }

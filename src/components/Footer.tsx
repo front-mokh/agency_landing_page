@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative  bg-inverted border-t-[1.5px] border-mid-tone pt-8 pb-16">
+    <footer className="relative bg-inverted border-t-[1.5px] border-mid-tone pt-8 pb-16">
       <BackToTop />
       <Container className="items-center md:items-start">
         <Image
@@ -45,10 +45,15 @@ export default function Footer() {
 
           <div className="w-full border-t-[1.5px] mt-6 pt-6 border-mid-tone flex justify-center gap-8">
             <button className="flex items-center justify-center w-12 h-12 rounded-md bg-mid-tone">
-              <Image src={"/icons/instagram.svg"} alt={""} width={32} height={32}/>
+              <Image
+                src={"/icons/instagram.svg"}
+                alt={""}
+                width={32}
+                height={32}
+              />
             </button>
             <button className="flex items-center justify-center w-12 h-12 rounded-md bg-mid-tone">
-            <Image src={"/icons/email.svg"} alt={""} width={32} height={32}/>
+              <Image src={"/icons/email.svg"} alt={""} width={32} height={32} />
             </button>
           </div>
         </div>
@@ -86,6 +91,22 @@ export default function Footer() {
           </div>
         </div>
       </Container>
+      <div className="absolute h-full aspect-square  bottom-0 right-0">
+        <Image
+          src={"/patterns/footer-right.svg"}
+          alt={""}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="absolute h-full aspect-[2/3] top-0 left-0">
+        <Image
+          src={"/patterns/footer-left.svg"}
+          alt={""}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
     </footer>
   );
 }

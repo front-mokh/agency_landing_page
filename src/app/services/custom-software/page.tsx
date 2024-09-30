@@ -37,7 +37,7 @@ export function ServicePage({ service }: { service: Service }) {
             features={service.features}
           />
           <ContactBanner />
-          <ServiceFAQ faq={service.faq} />
+          <ServiceFAQ faq={service.faq}/>
         </div>
       </Container>
     </Section>

@@ -9,11 +9,11 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="absolute bottom-4 right-4 flex items-center justify-center w-12 h-12 rounded-md bg-mid-tone"
+      className="absolute bottom-4 right-4 flex items-center justify-center w-10 h-10 rounded-md bg-mid-tone"
     >
       <svg
-        width="32px"
-        height="32px"
+        width="28px"
+        height="28px"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

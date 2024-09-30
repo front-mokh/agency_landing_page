@@ -58,7 +58,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <Section background="dark" className="relative overflow-y-visible">
+  <Section background="dark" className="relative overflow-y-visible">
       {/* <SvgBackground /> */}
       {/* <Gradient /> */}
       <Image

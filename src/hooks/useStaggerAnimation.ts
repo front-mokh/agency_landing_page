@@ -25,11 +25,12 @@ export default function useStaggerAnimation(
 
     tl.fromTo(
       elements,
-      { y: 15, scale: 1.04 },
+      { y: 15, scale: 1.0, opacity: 0.95 },
       {
         y: 0,
         scale: 1,
         duration: 0.6,
+        opacity: 1,
         ease: "power3.out",
         stagger: staggerDelay,
         delay: initialDelay,

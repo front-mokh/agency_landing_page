@@ -9,14 +9,12 @@ type SectionProps = VariantProps<typeof containerVariants> & {
   className?: string;
 };
 
-export default function Container({
-  children,
-  className,
-  ...props
-}: SectionProps) {
+function Container({ children, className, ...props }: SectionProps) {
   return (
     <div className={cn(containerVariants({ ...props, className }))}>
       {children}
     </div>
   );
 }
+
+export default React.forwardRef(Container);
